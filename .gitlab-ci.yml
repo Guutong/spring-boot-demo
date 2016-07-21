@@ -1,9 +1,7 @@
 stages:
   - build
 
-job_build:
+assemble:
   stage: build
   script:
-    - ./gradlew clean build
-  only:
-    - master
+    - ./gradlew clean assemble
