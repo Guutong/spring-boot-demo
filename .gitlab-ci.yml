@@ -9,8 +9,7 @@ job_build:
     - ./gradlew clean build
   artifacts:
     paths:
-    - demo/build/libs/*.jar
-    - demo/build/libs/*.jar
+    - spring-boot-demo/build/libs/*.jar
   only:
     - master
   tags:
