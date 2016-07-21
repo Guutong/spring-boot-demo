@@ -1,2 +1,18 @@
+image: java:8-jdk
+
+stages:
+  - build
+
 job_build:
-  script: "gradle build"
+  stage: build
+  script:
+    - ./gradlew clean build
+  artifacts:
+    paths:
+    - demo/build/libs/*.jar
+    - demo/build/libs/*.jar
+  only:
+    - master
+  tags:
+    - java
+    - docker
