@@ -1,5 +1,3 @@
-image: java:8-jdk
-
 stages:
   - build
 
@@ -7,11 +5,5 @@ job_build:
   stage: build
   script:
     - ./gradlew clean build
-  artifacts:
-    paths:
-    - spring-boot-demo/build/libs/*.jar
   only:
     - master
-  tags:
-    - java
-    - docker
